@@ -1,0 +1,62 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if we're on mobile
+      var isMobile = window.innerWidth <= 800;
+      
+      // Get all sidebar headings
+      var headings = document.querySelectorAll('.sidebar-heading');
+      
+      headings.forEach(function(heading) {
+        // Only add toggle functionality on mobile
+        if (isMobile) {
+          // Add toggle indicator
+          heading.innerHTML += ' <span class="toggle-indicator">▼</span>';
+          
+          // Initially hide lists on mobile
+          var list = heading.nextElementSibling;
+          if (list && list.classList.contains('lecture-list')) {
+            list.style.display = 'none';
+          }
+          
+          // Add click handler
+          heading.addEventListener('click', function() {
+            var list = this.nextElementSibling;
+            var indicator = this.querySelector('.toggle-indicator');
+            
+            if (list && list.classList.contains('lecture-list')) {
+              if (list.style.display === 'none') {
+                list.style.display = 'block';
+                indicator.textContent = '▲';
+              } else {
+                list.style.display = 'none';
+                indicator.textContent = '▼';
+              }
+            }
+          });
+          
+          // Style heading as clickable
+          heading.style.cursor = 'pointer';
+          heading.style.backgroundColor = '#eee';
+          heading.style.padding = '8px';
+          heading.style.borderRadius = '4px';
+        }
+      });
+      
+      // Keep the active section visible on mobile
+      if (isMobile) {
+        var activeLi = document.querySelector('.lecture-list li.active');
+        if (activeLi) {
+          var parentList = activeLi.parentElement;
+          var parentHeading = parentList.previousElementSibling;
+          
+          if (parentList && parentHeading) {
+            parentList.style.display = 'block';
+            var indicator = parentHeading.querySelector('.toggle-indicator');
+            if (indicator) {
+              indicator.textContent = '▲';
+            }
+          }
+        }
+      }
+    });
+  </script>

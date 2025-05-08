@@ -1,0 +1,79 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+/* Increase overall container width */
+.wrapper {
+  max-width: 1200px !important;
+}
+
+/* Layout styling */
+.page-content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  margin-right: 30px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #e8e8e8;
+  border-radius: 5px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.lecture-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.lecture-list li {
+  margin-bottom: 10px;
+}
+
+.lecture-list li a {
+  text-decoration: none;
+}
+
+.lecture-list li.active a {
+  font-weight: bold;
+  color: #2a7ae2;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 800px) {
+  .page-content-wrapper {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    border-right: none;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  
+  .toggle-indicator {
+    float: right;
+    font-size: 12px;
+  }
+}

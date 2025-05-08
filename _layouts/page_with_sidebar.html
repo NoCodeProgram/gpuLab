@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<div class="page-content-wrapper">
+  <div class="sidebar">
+    {% if page.collection == "cuda" or page.url contains "/cuda/" %}
+      <h3 class="sidebar-heading">CUDA Lectures</h3>
+      <ul class="lecture-list">
+        {% if site.cuda.size > 0 %}
+          {% assign sorted_docs = site.cuda | sort: "order" %}
+          {% for doc in sorted_docs %}
+            <li {% if page.url == doc.url %}class="active"{% endif %}>
+              <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
+            </li>
+          {% endfor %}
+        {% else %}
+          <li><em>No CUDA lectures available yet</em></li>
+        {% endif %}
+      </ul>
+    {% endif %}
+    
+    {% if page.collection == "cpp" or page.url contains "/cpp/" %}
+      <h3 class="sidebar-heading">C++ Lectures</h3>
+      <ul class="lecture-list">
+        {% if site.cpp.size > 0 %}
+          {% assign sorted_docs = site.cpp | sort: "order" %}
+          {% for doc in sorted_docs %}
+            <li {% if page.url == doc.url %}class="active"{% endif %}>
+              <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
+            </li>
+          {% endfor %}
+        {% else %}
+          <li><em>No C++ lectures available yet</em></li>
+        {% endif %}
+      </ul>
+    {% endif %}
+  </div>
+  
+  <div class="main-content">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+      </header>
+      
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</div>
+
+{% include sidebar_script.html %}
