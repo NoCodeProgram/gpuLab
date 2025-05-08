@@ -28,14 +28,15 @@ github_username:  nocodeProgram
 
 # Build settings
 theme: minima
-
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  
 collections:
   cuda:
     output: true
     permalink: /cuda/:path/
-  cpp:
-    output: true
-    permalink: /cpp/:path/
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
