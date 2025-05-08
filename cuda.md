@@ -4,6 +4,4 @@ title: CUDA
 permalink: /cuda/
 ---
 
-# CUDA Programming for GPUs
-
-Welcome to the CUDA section. Choose a lecture from the sidebar.
+<meta http-equiv="refresh" content="0; url=/cuda/01-intro/">

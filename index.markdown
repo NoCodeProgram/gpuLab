@@ -29,6 +29,9 @@ GPU Lab은 CUDA 개발, GPU 프로그래밍, 고성능 컴퓨팅(HPC)에 관심 
 
 ---
 
-📩 **개발 협업 및 프로젝트 의뢰:**  
-GPU 관련 프로젝트나 개발 협업이 필요하신 분은 `nocodeprogramming@gmail.com` 으로 문의해 주세요.
+📬 **일반 문의 및 커뮤니티 참여:**  
+질문이나 토론은 [디스코드 채널](https://discord.gg/hZAXkHHzQf)을 통해 자유롭게 참여해 주세요.
+
+💼 **GPU 개발 의뢰 또는 협업 제안:**  
+전문적인 GPU 개발 프로젝트 의뢰나 협업 제안은 `nocodeprogramming@gmail.com` 으로 문의해 주세요.
 

@@ -1,6 +1,6 @@
 ---
 layout: page_with_sidebar
-title: "Introduction to CUDA"
+title: "CUDA 소개"
 order: 1
 ---
 
