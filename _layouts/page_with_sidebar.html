@@ -17,23 +17,7 @@ layout: default
           <li><em>No CUDA lectures available yet</em></li>
         {% endif %}
       </ul>
-    {% endif %}
-    
-    {% if page.collection == "cpp" or page.url contains "/cpp/" %}
-      <h3 class="sidebar-heading">C++ Lectures</h3>
-      <ul class="lecture-list">
-        {% if site.cpp.size > 0 %}
-          {% assign sorted_docs = site.cpp | sort: "order" %}
-          {% for doc in sorted_docs %}
-            <li {% if page.url == doc.url %}class="active"{% endif %}>
-              <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
-            </li>
-          {% endfor %}
-        {% else %}
-          <li><em>No C++ lectures available yet</em></li>
-        {% endif %}
-      </ul>
-    {% endif %}
+    {% endif %}    
   </div>
   
   <div class="main-content">
